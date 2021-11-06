@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mi Perfil</title>
+    <%- include ('partials/_head.html')%>
+  </head>
+  <body>
+    <div class="container-fluid text-center" style="position: relative; padding: 40px;">
+        <div class="navbar-brand" style="position: absolute; left: 70px;">
+            <span class="navbar-logo">
+              <a>
+                <img
+                  src="assets/images/mbr-80x79.png"
+                  alt="Mobirise"
+                  style="height: 3rem"
+                />
+              </a>
+            </span>
+            <span class="navbar-caption-wrap"
+              ><a class="navbar-caption text-black display-7">Mobirise</a></span
+            >
+          </div>
+        <h1>Mis Turnos</h1>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Servicio</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Taller</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-active">
+                <td>1</td>
+                <td>Lavado</td>
+                <td>22/10/2021</td>
+                <td>Pendiente</td>
+                <td>
+                  <i class="fas fa-external-link-alt"></i>
+                </td>
+                <td>
+                    <i class="far fa-window-close"></i>
+                </td>
+              </tr>
+              <tr class="table-success">
+                <td>2</td>
+                <td>Estetica, Lavado</td>
+                <td>20/9/2021</td>
+                <td>Realizado</td>
+                <td>
+                  <i class="fas fa-external-link-alt"></i>
+                </td>
+                <td>
+                    <i class="far fa-trash-alt"></i>
+                </td>
+              </tr>
+              <tr class="table-danger">
+                <td>3</td>
+                <td>Mecanica</td>
+                <td>27/10/2021</td>
+                <td>Cancelado</td>
+                <td>
+                  <i class="fas fa-external-link-alt"></i>
+                </td>
+                <td>
+                    <i class="far fa-trash-alt"></i>
+                    <span>|</span>
+                    <i class="fas fa-redo"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row">
+            <div class="col-md-2">
+              <button type="button" class="btn btn-success">Pedir Turno</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
