@@ -1,5 +1,5 @@
 const {server} = require('./server')
-require('./database')
+//require('./database')
 
 
 //Escuchar en puerto 
