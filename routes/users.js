@@ -5,6 +5,7 @@ const usersControler = require('../controllers/users')
 
 router.get("/signup", usersControler.signupForm);
 router.get("/login", usersControler.loginForm);
+router.get("/perfil", usersControler.profile)
 // router.get("/play", isAuthenticated, indexControler.play);
 
 

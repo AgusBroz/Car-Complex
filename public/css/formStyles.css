@@ -1,5 +1,4 @@
 .register{
-    
     margin-top: 3%;
     padding: 3%;
 }
@@ -92,4 +91,8 @@
     margin-top: 8%;
     margin-bottom: -15%;
     color: #495057;
+}
+.popup{
+    position: relative; 
+    width: 50vw;
 }

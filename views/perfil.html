@@ -2,27 +2,26 @@
 <html lang="en">
   <head>
     <title>Mi Perfil</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <%- include ('partials/_head.html')%>
   </head>
   <body>
-    <div class="container-fluid text-center" style="position: relative; padding: 40px;">
-        <div class="navbar-brand" style="position: absolute; left: 70px;">
-            <span class="navbar-logo">
-              <a>
-                <img
-                  src="assets/images/mbr-80x79.png"
-                  alt="Mobirise"
-                  style="height: 3rem"
-                />
-              </a>
-            </span>
-            <span class="navbar-caption-wrap"
-              ><a class="navbar-caption text-black display-7">Mobirise</a></span
-            >
-          </div>
-        <h1>Mis Turnos</h1>
-    </div>
-    <div class="container-fluid">
+    <%- include ('partials/_nav.html')%>
+    <div class="container-fluid" style="margin-top: 5%">
+      <h1 class="text-center">Mis Datos</h1>
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets/images/profile.jpg" alt="Foto de perfil" width="" />
+        </div>
+        <div class="profile-actions col-md-10 d-flex justify-content-center flex-column">
+          <h2>Agustin Broz Arias</h2>
+          <a id="delAcc" href="#">Eliminar Cuenta</a>
+          <a href="#">Logout</a>
+          <a href="">Cambiar Contraseña</a>
+        </div>
+      </div>
+      <hr>
+      <h1 class="text-center">Mis Turnos</h1>
       <div class="row">
         <div class="col-md-12">
           <table class="table">
@@ -46,7 +45,7 @@
                   <i class="fas fa-external-link-alt"></i>
                 </td>
                 <td>
-                    <i class="far fa-window-close"></i>
+                  <i class="far fa-window-close"></i>
                 </td>
               </tr>
               <tr class="table-success">
@@ -58,7 +57,7 @@
                   <i class="fas fa-external-link-alt"></i>
                 </td>
                 <td>
-                    <i class="far fa-trash-alt"></i>
+                  <i class="far fa-trash-alt"></i>
                 </td>
               </tr>
               <tr class="table-danger">
@@ -70,9 +69,9 @@
                   <i class="fas fa-external-link-alt"></i>
                 </td>
                 <td>
-                    <i class="far fa-trash-alt"></i>
-                    <span>|</span>
-                    <i class="fas fa-redo"></i>
+                  <i class="far fa-trash-alt"></i>
+                  <span>|</span>
+                  <i class="fas fa-redo"></i>
                 </td>
               </tr>
             </tbody>
@@ -86,6 +85,36 @@
       </div>
     </div>
 
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <div id="close-popup"class="d-flex align-items-center justify-content-end">
+          <i class="fas fa-times close-popup"></i>
+        </div>
+        <div class="row">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi quis
+            dolorem doloremque expedita cum possimus sed sint. Quam quos tenetur
+            reprehenderit, velit, quod quia ea repellat aut molestiae eum
+            tempora? Itaque assumenda explicabo harum ratione vel voluptatum,
+            deserunt culpa voluptates nostrum nam dicta quibusdam dolorem,
+            adipisci animi totam! Natus nisi quo ut fugiat, earum repudiandae
+            laborum quae deleniti voluptatibus dolorum?
+          </p>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-6">
+            <label for="confirm" style="cursor: pointer; display: inline-block;"
+              >Borrar Cuenta
+              <input type="checkbox" id="confirm" style="cursor: pointer" />
+            </label>
+          </div>
+          <div class="col-md-6 d-flex">
+            <input class="flex-grow-1" type="password" placeholder="Escriba su contraseña" />
+            <input class="btn" type="submit" value="Confirmar" style="margin: 0 7px; background-color: rgb(228, 120, 120);">
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
