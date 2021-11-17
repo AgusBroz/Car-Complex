@@ -7,5 +7,8 @@ module.exports ={
     },
     profile: (req, res)=>{
         res.render("perfil.html")
+    },
+    recoverPassword:  (req, res)=>{
+        res.render("recoverPassword.html")
     }
 }
