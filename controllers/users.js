@@ -10,5 +10,8 @@ module.exports ={
     },
     recoverPassword:  (req, res)=>{
         res.render("recoverPassword.html")
+    },
+    postCar:  (req, res)=>{
+        res.render("cargarAuto.html")
     }
 }

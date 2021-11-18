@@ -3,11 +3,9 @@ module.exports = app =>{
     const indexRoutes = require(path.join(__dirname, 'routes','index'))
     const usersRoutes = require(path.join(__dirname, 'routes', 'users'))
     const turnosRoutes = require(path.join(__dirname, 'routes', 'turnos'))
+    const resourcesRoutes = require(path.join(__dirname, 'routes', 'resources'))
 
-    app.use('/', indexRoutes)
-    app.use('/', usersRoutes)
-    app.use('/', turnosRoutes )
-    // app.use('/scoreboard', scoreboardRoutes)
+    app.use('/', indexRoutes, usersRoutes, turnosRoutes, resourcesRoutes)
     app.get("*", function (req, res) {
         res.redirect("/");
         //res.end()

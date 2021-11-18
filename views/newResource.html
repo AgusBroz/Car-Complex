@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar nuevo Taller</title>
+    <link rel="stylesheet" href="./css/formStyles.css" />
+    <%- include ('partials/_head.html')%>
+  </head>
+  <body>
+    <%- include ('partials/_nav.html')%>
+    <div class="form-body">
+      <div class="row">
+        <div class="form-holder">
+          <div class="form-content">
+            <div class="form-items">
+              <select id="resource-selector" class="form-select mt-3" required>
+                <option selected value="workshop">Taller</option>
+                <option value="service">Servicio</option>
+              </select>
+
+              <div class="resource-form" id="workshop-form">
+                <h3>Cargar Taller</h3>
+                <form class="requires-validation" novalidate>
+                  <div class="col-md-12"></div>
+                  <div class="col-md-12 car-details">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="name"
+                      placeholder="Nombre del Taller"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12 car-details">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="city"
+                      placeholder="Ciudad"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12 car-details">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="street"
+                      placeholder="Calle"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12 car-details d-flex align-items-center">
+                    <label for="portrait">Portada:</label>
+
+                    <input id="portrait" class="form-control" type="file" />
+                  </div>
+
+                  <select multiple class="form-select mt-3" required>
+                    <option selected>Seleccione servicio/s</option>
+                    <option value="1">Mecanica</option>
+                    <option value="2">Pintura Automotriz</option>
+                    <option value="3">Escáner de fallas</option>
+                  </select>
+
+                  <div class="form-button mt-3">
+                    <button id="submit" type="" class="btn btn-danger">
+                      Cargar
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="resource-form not-show" id="service-form">
+                <h3>Cargar Servicio</h3>
+                <form class="requires-validation" novalidate>
+                  <div class="col-md-12"></div>
+                  <div class="col-md-12 car-details">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="servicio"
+                      placeholder="Nombre del servicio"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12 car-details">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="descripcion"
+                      placeholder="Descripcion del servicio"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12 car-details">
+                    <input
+                      class="form-control"
+                      type="number"
+                      name="duracion"
+                      placeholder="Duracion Estimada (hs)"
+                      required
+                    />
+                  </div>
+
+                  <select class="form-select mt-3" required>
+                    <option selected>Seleccione un Taller (Opcional)</option>
+                    <option value="1">Taller 1</option>
+                    <option value="2">Taller 2</option>
+                    <option value="3">Taller 3</option>
+                  </select>
+
+                  <div class="form-button mt-3">
+                    <button id="submit" type="" class="btn btn-danger">
+                      Cargar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var workshopInput = document.getElementById("workshop-form");
+    var serviceInput = document.getElementById("service-form");
+    document
+      .getElementById("resource-selector")
+      .addEventListener("change", function () {
+        if (this.value === "workshop") {
+          workshopInput.classList.remove("not-show");
+          serviceInput.classList.add("not-show");
+        } else if (this.value === "service") {
+          serviceInput.classList.remove("not-show");
+          workshopInput.classList.add("not-show");
+        }
+      });
+  </script>
+</html>

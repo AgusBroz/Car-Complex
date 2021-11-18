@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cargar Auto</title>
+    <%- include ('partials/_head.html')%>
+    <link rel="stylesheet" href="./css/formStyles.css" />
+  </head>
+  <body>
+    <%- include ('partials/_nav.html')%>
+    <div class="form-body">
+      <div class="row">
+        <div class="form-holder">
+          <div class="form-content">
+            <div class="form-items">
+              <div class="d-flex">
+                <h3>Cargar Auto</h3>
+                <div class="car">
+                  <img
+                    style="margin: 0"
+                    src="https://i.postimg.cc/2yJkJjBQ/auto.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <form class="requires-validation" novalidate>
+                <div class="col-md-12">
+                  <select id="model-selector"class="form-select mt-3" required>
+                    <option selected disabled value="">Busca tu modelo</option>
+                    <option value="1">Volkswagen Gol Trend 5P Trendline</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="other">Otro</option>
+                  </select>
+                </div>
+                <div class="col-md-12 car-details">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="marca"
+                    placeholder="Marca"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-12 car-details">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="modelo"
+                    placeholder="Modelo"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-12 car-details">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="año"
+                    placeholder="Año"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-12 car-details">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="color"
+                    placeholder="Color"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-12 car-details">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="motor"
+                    placeholder="Motor"
+                    required
+                  />
+                </div>
+
+                <div class="form-button mt-3">
+                  <button id="submit" type="" class="btn btn-danger">
+                    Cargar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        var carInputs = document.querySelectorAll('.car-details');
+        document
+            .getElementById("model-selector")
+            .addEventListener('change',function(){
+                if(this.value === 'other'){
+                    carInputs.forEach(n=>{
+                        n.classList.remove('not-show')
+                    })
+                }else{
+                    carInputs.forEach(n=>{
+                        n.classList.add('not-show')
+                    })
+                }
+            });
+
+
+    </script>
+  </body>
+</html>

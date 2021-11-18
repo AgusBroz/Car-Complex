@@ -7,7 +7,7 @@
   </head>
   <body>
     <%- include ('partials/_nav.html')%>
-    <div class="container-fluid" style="margin-top: 5%">
+    <div class="container-fluid" style="margin-top: 2%">
       <h1 class="text-center">Mis Datos</h1>
       <div class="row">
         <div class="col-md-2">
@@ -78,7 +78,50 @@
           </table>
           <div class="row">
             <div class="col-md-2">
-              <button type="button" class="btn btn-success">Pedir Turno</button>
+              <a href="/turnos/new"><button type="button" class="btn btn-success">Pedir Turno</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h1 class="text-center">Mis autos</h1>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Color</th>
+                <th>Motor</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-active">
+                <td>1</td>
+                <td>Chevrolet</td>
+                <td>Cruze</td>
+                <td>2021</td>
+                <td>
+                  Blanco
+                </td>
+                <td>
+                  Turbo - 153 CV
+                </td>
+                <td>
+                  <i class="far fa-trash-alt"></i>
+                  <span>|</span>
+                  <i class="far fa-edit"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row">
+            <div class="col-md-2">
+              <a href="cargarAuto"><button type="button" class="btn btn-success">Cargar auto</button></a>
             </div>
           </div>
         </div>
